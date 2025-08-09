@@ -1,3 +1,8 @@
+TL;DR
+=========
+
+This package fixes errors due to having a module in your workspace node_modules and it gets fixed when you move it manually to the root node_modules at the cost of additional disk usage.
+
 hoist-all
 =========
 
@@ -6,17 +11,26 @@ hoist-all
 Installation
 ------------
 
+Install it in root package.json
+
     npm install hoist-all --save-dev
 
 
 Usage
 -----
 
-You can run `hoist-all` via the command line.
+Add it to postinstall script in the root package.json.
 
-### CLI
+    "scripts": {
+      ...
+      "postinstall": "hoist-all" 
+    }
 
-    npx hoist-all [appsFolder] [workspaceRoot]
+Now after you run `npm i -w your_app`, it will only install workspace related deps and copy modules in your app to the root autmatically.
+
+### Options
+
+    hoist-all [appsFolder] [workspaceRoot]
 
 
 *   `appsFolder` (optional) - Name of the folder containing app directories. Defaults to `apps`.

@@ -1,5 +1,3 @@
-hoist-all - README
-
 hoist-all
 =========
 

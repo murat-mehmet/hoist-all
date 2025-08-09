@@ -1,7 +1,7 @@
 TL;DR
 =========
 
-This package fixes errors due to having a module in your workspace node_modules and it gets fixed when you move it manually to the root node_modules at the cost of additional disk usage.
+This package fixes errors due to having a module in your workspace node_modules and it gets fixed when you copy it manually to the root node_modules at the cost of additional disk usage.
 
 hoist-all
 =========

@@ -23,10 +23,10 @@ Add it to postinstall script in the root package.json.
 
     "scripts": {
       ...
-      "postinstall": "hoist-all" 
+      "postinstall": "hoist-all"
     }
 
-Now after you run `npm i -w your_app`, it will only install workspace related deps and copy modules in your app to the root autmatically.
+Now after you run `npm i -w your_app`, it will only install workspace related deps and symlink modules in your app to the root automatically.
 
 ### Options
 
@@ -76,7 +76,7 @@ Suppose you have the following structure:
             axios/
 
 
-Running `npx hoist-all` will copy `lodash` and `axios` into the root-level `node_modules`.
+Running `npx hoist-all` will symlink `lodash` and `axios` into the root-level `node_modules`.
 
 License
 -------

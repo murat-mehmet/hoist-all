@@ -39,11 +39,26 @@ Now after you run `npm i -w your_app`, it will only install workspace related de
 Features
 --------
 
-*   Copies (not moves) modules from app-level `node_modules` to the root-level `node_modules`.
+*   Hoist mode: Copies modules from app-level `node_modules` to root-level `node_modules`.
+*   Reverse-hoist mode: If app config `target` is `app`, copies modules from root-level `node_modules` to the app's `node_modules`.
 *   Skips folders starting with `.` and other known system folders.
 *   Silent skip for already existing modules.
 *   Reports total number of copied modules per app.
 *   No third-party dependencies.
+
+Configuration
+-------------
+
+Currently, configuration is read from the `hoist` object in the app's `package.json`. Example:
+
+    {
+      "name": "my-app",
+      ...
+      "hoist": {
+        "target": "app"
+      }
+    }
+    
 
 Example
 -------

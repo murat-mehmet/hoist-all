@@ -49,13 +49,13 @@ Features
 Configuration
 -------------
 
-Currently, configuration is read from the `hoist` object in the app's `package.json`. Example:
+Currently, configuration is read from the `hoist` object in the app's `package.json`. Default is `root`. Example:
 
     {
       "name": "my-app",
       ...
       "hoist": {
-        "target": "app"
+        "target": "root|app"
       }
     }
     

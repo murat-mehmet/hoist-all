@@ -1,6 +1,6 @@
 {
   "name": "hoist-all",
-  "version": "0.0.22",
+  "version": "0.1.0",
   "description": "Copy all non-existing node_modules from apps/* into root node_modules in a monorepo.",
   "bin": {
     "hoist-all": "bin/cli.js"
